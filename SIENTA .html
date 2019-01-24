@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta property="og:title" content="TOYOTA SIENTA 車主愛分享"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="TOYOTA SIENTA 車主愛分享"/>
+    <meta property="og:url" content="http://www.toyota.com.tw/event/sienta_photowall/"/>
+    <meta property="og:image" content="http://www.toyota.com.tw/event/sienta_photowall/assets/images/ogimage.jpg"/>
+    <meta property="og:locale" content="zh_TW"/>
+    <title>TOYOTA SIENTA 車主愛分享</title>
+    <link rel="stylesheet" href="assets/styles/main.css"/>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1766489-9');
+      ga('send', 'pageview', 'sienta-sustain-landing');
+      
+    </script>
+  </head>
+  <body>
+	<input name="vote_token" type="hidden" id="vote_token" value="8499bcfe-84a7-4503-97f8-1ca8eff79f24" />
+    <svg id="svgLib" width="20px" height="20px" viewBox="48.5 50.856 31 26.288">
+      <path id="heart" stroke-miterlimit="10" d="M79,59.287c0-4.379-3.551-7.93-7.931-7.93 c-3.09,0-5.762,1.771-7.069,4.351c-1.309-2.58-3.979-4.351-7.07-4.351c-4.38,0-7.93,3.55-7.93,7.93c0,8.285,13.305,17.358,15,17.358 C65.696,76.645,79,67.611,79,59.287z"></path>
+    </svg>
+    <section id="masthead">
+      <div class="scroll-tip"><img src="assets/images/scrolltip-arrow.png"/></div>
+      <div class="mainContent">
+        <div class="step active offset">
+          <div class="title"></div>
+          <div class="step1-1 active">
+            <P class="subtitle">
+               
+              聽聽車主不藏私分享<br/>也邀您暢談與SIENTA的生活小故事            
+            </P><a class="btn btn-start">開始投稿</a>
+          </div>
+          <div class="step1-2">
+            <P class="subtitle">
+               
+              聽聽車主不藏私分享<br/>也邀您暢談與SIENTA的生活小故事
+            </P><a class="uploadBtn">
+              <div class="wrapper">
+                <p>上傳你和SIENTA的合照</p>
+                <p></p>
+                <div class="icon"><img src="assets/images/icon-upload.svg"/></div>
+              </div><img src="assets/images/ok.svg" class="ok"/>
+              <input type="file" accept="image/*" id="userdata-photo"/></a>
+            <div id="crop"></div><a class="btn btn-next">下一步</a>
+          </div>
+        </div>
+        <div class="step">
+          <div class="title">           </div>
+          <P class="subtitle">
+             
+            聽聽車主不藏私分享<br/>也邀您暢談與SIENTA的生活小故事
+          </P>
+          <div class="input-container">
+            <div class="input-container-header">
+              <P>心得</P>
+            </div>
+            <div class="input-container-content">
+              <textarea placeholder="請輸入您與SIENTA的小故事，限100字" id="userdata-comment" maxlength="99"></textarea>
+            </div>
+          </div><a class="btn grouped btn-back">上一步</a><a class="btn btn-next">下一步</a>
+        </div>
+        <div class="step">
+          <div class="title"></div>
+          <div class="input-container">
+            <div class="input-container-header">
+              <P>顯示名稱</P>
+            </div>
+            <div class="input-container-content">
+              <input type="text" id="userdata-nickname" maxlength="20" placeholder="這裡會顯示為您的暱稱"/>
+            </div>
+          </div>
+          <p class="info">以下資料僅作為抽獎活動使用</p>
+          <div class="input-container">
+            <div class="input-container-header">
+              <P>姓名</P>
+            </div>
+            <div class="input-container-content">
+              <input type="text" id="userdata-name" maxlength="20"/>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="input-container-header">
+              <P>電話</P>
+            </div>
+            <div class="input-container-content">
+              <input type="tel" id="userdata-phone" maxlength="10"/>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="input-container-header">
+              <P>信箱</P>
+            </div>
+            <div class="input-container-content">
+              <input type="email" id="userdata-email" maxlength="200"/>
+            </div>
+          </div>
+          <div class="input-container captcha">
+            <div class="input-container-header">
+              <P>驗證碼</P>
+            </div>
+            <div class="input-container-content"><img id="captcha-image" src=""/>
+              <input type="number" id="userdata-captcha" placeholder="請輸入驗證碼" maxlength="20"/>
+            </div>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="userdata-checkbox"/>
+            <label for="userdata-checkbox">本人已審閱且同意本<a class="btn-rule">活動辦法</a>及<a class="btn-rule">注意事項</a></label>
+          </div><a class="btn grouped btn-back">上一步</a><a class="btn btn-send">送出</a>
+        </div><img src="assets/images/logo.png" class="logo"/>
+        <nav>
+          <ul>
+            <li class="btn-winner">
+              <p>得獎名單</p>
+            </li>
+            <li class="btn-rule">
+              <p>活動辦法</p>
+            </li>
+            <li class="btn-video">
+              <p>車主影片</p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section id="photowall" style="margin-bottom: 0;">
+    </section>
+    <div class="backToTop"></div>
+    <div id="video" class="overlap">
+      <div class="close"></div>
+      <div class="wrapper">
+        <div data-vid="Xp8G8cBRbIc" class="video">
+          <div class="video-cover-container"><img src="assets/images/video-thumbnail-1.jpg" class="video-cover"/></div>
+          <div class="video-text">給全家人安全舒適的行動空間 - 為了最愛，我選擇最好的。</div>
+        </div>
+        <div data-vid="hXkeEvbXCyU" class="video">
+          <div class="video-cover-container"><img src="assets/images/video-thumbnail-2.jpg" class="video-cover"/></div>
+          <div class="video-text">選擇SIENTA，給了我們全家更多幸福生活的彈性選擇。</div>
+        </div>
+        <div data-vid="TwtxL7V9MKg" class="video">
+          <div class="video-cover-container"><img src="assets/images/video-thumbnail-3.jpg" class="video-cover"/></div>
+          <div class="video-text">內外兼備，空間自由的SIENTA是我生活中的好幫手。</div>
+        </div>
+        <div class="video"><img src="assets/images/video-commingsoon-4.jpg" class="video-cover"/></div>
+        <div class="video-lightbox">
+          <div class="close"></div>
+          <div class="youtube-container">
+            <iframe src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="complete" class="overlap">
+      <div class="close"></div>
+      <div class="wrapper">
+        <p>資料送出成功！您的投稿資料經審核確認後，即可出現在網站中</p><a class="btn">看看大家的SIENTA生活小故事</a>
+      </div>
+    </div>
+    <div id="winner" class="overlap">
+      <div class="close"></div>
+      <div class="wrapper">
+        <div class="mainTitle">得獎名單</div>
+        <div class="week noMargin">第六波得獎名單</div>
+        <hr/>
+        <div class="title">【SIENTA造型絨毛毯被】</div>
+        <ul>
+          <li>陳X憲(SIENTA CULB)</li>
+          <li>張X瑜(TSF)</li>
+        </ul>
+        <div class="title">【SIENTA LED迴力車】</div>
+        <ul>
+          <li>邱X美(慈母橋)</li>
+          <li>姜X寧(星宇)</li>
+          <li>謝陳X鶯(黃金雨)</li>
+          <li>吳X甫(毛毛)</li>
+          <li>謝X憲(度假去！)</li>
+          <li>石X鈞(思念)</li>
+          <li>張X銘(小銘)</li>
+          <li>謝X恩(蘇花公路 大清水隧道)</li>
+          <li>楊X忠(阿忠)</li>
+          <li>胡X惠(我最可愛的 SIENTA)</li>
+        </ul>
+        <div class="week">第五波得獎名單</div>
+        <hr/>
+        <div class="title">【SIENTA造型絨毛毯被】</div>
+        <ul>
+          <li>楊X忠(楊阿忠)</li>
+        </ul>
+        <div class="title">【SIENTA造型隨身碟】</div>
+        <ul>
+          <li>林X婉(沙)</li>
+        </ul>
+        <div class="title">【SIENTA LED迴力車】</div>
+        <ul>
+          <li>徐X晴(晴天)</li>
+          <li>謝X恩(阿勃勒大道)</li>
+          <li>邱X美(環島走走逛逛)</li>
+          <li>吳X敏(Sienta全台走透透)</li>
+          <li>胡X惠(行車平安！)</li>
+          <li>張X琳(若琳)</li>
+          <li>潘X梅(就是帥)</li>
+          <li>郭X民(民)</li>
+          <li>黃X達(韋翰)</li>
+          <li>邱X睿(邱小睿)</li>
+        </ul>
+        <div class="week">第四波得獎名單</div>
+        <hr/>
+        <div class="title">【SIENTA造型絨毛毯被】</div>
+        <ul>
+          <li>陳X宏(I LOVE SIENTA)</li>
+        </ul>
+        <div class="title">【SIENTA造型隨身碟】</div>
+        <ul>
+          <li>胡X惠(馭風)</li>
+        </ul>
+        <div class="title">【SIENTA LED迴力車】</div>
+        <ul>
+          <li>謝X哲(ㄚ哲)</li>
+          <li>蔡X彬(9997大車隊)</li>
+          <li>楊呂X足(三家ㄧ口)</li>
+          <li>顧X馨(Ann)</li>
+          <li>黃X榤(倆寶貝的車)</li>
+          <li>白X龍(台中小白)</li>
+          <li>謝X融(快樂巡航！)</li>
+          <li>邱X美(滿載)</li>
+          <li>謝陳X鶯(SIENTA拜仙禮佛去！)</li>
+          <li>洪X竣(鬍渣)</li>
+        </ul>
+        <div class="week">第三波得獎名單</div>
+        <hr/>
+        <div class="title">【SIENTA造型絨毛毯被】</div>
+        <ul>
+          <li>沈X慶(慶)</li>
+        </ul>
+        <div class="title">【SIENTA造型隨身碟】</div>
+        <ul>
+          <li>謝X憲(清境楓紅)</li>
+        </ul>
+        <div class="title">【SIENTA LED迴力車】</div>
+        <ul>
+          <li>謝X融(輕鬆跑上標高3150松雪樓！)</li>
+          <li>謝X恩(曼波魚天線！)</li>
+          <li>林X妤(水水)</li>
+          <li>李X儒(小天貓)</li>
+          <li>謝陳X鶯(越看越喜歡！)</li>
+          <li>潘X梅(白帥帥)</li>
+          <li>楊X蓁(溱瑀的車)</li>
+          <li>林X徨(琮徨)</li>
+          <li>金X安(海莉)</li>
+          <li>劉X賢(小黑，你真贊)</li>
+        </ul>
+        <div class="week">第二波得獎名單				</div>
+        <hr/>
+        <div class="title">【SIENTA造型絨毛毯被】</div>
+        <ul>
+          <li>李X翰(Summer lee)</li>
+        </ul>
+        <div class="title">【SIENTA造型隨身碟】</div>
+        <ul>
+          <li>余X晴(KIKI)</li>
+        </ul>
+        <div class="title">【SIENTA LED迴力車】</div>
+        <ul>
+          <li>謝X憲(向前衝吧！SIENTA！)</li>
+          <li>陳X文(Andy)</li>
+          <li>陳X宏(SIENTA)</li>
+          <li>呂X蓉(妮妮)</li>
+          <li>賴X霖(彥霖)</li>
+          <li>許X展(Power)</li>
+          <li>楊X儒(阿儒)</li>
+          <li>盧X華(Louis.LU)</li>
+          <li>彭X妃(Phoebepeng)</li>
+          <li>林X威(林佑)</li>
+        </ul>
+        <div class="week">第一波得獎名單</div>
+        <hr/>
+        <div class="title">【SIENTA造型絨毛毯被】</div>
+        <ul>
+          <li>許X珍(呈珍)</li>
+        </ul>
+        <div class="title">【SIENTA造型隨身碟】</div>
+        <ul>
+          <li>毛X群(車聚)</li>
+        </ul>
+        <div class="title">【SIENTA LED迴力車】</div>
+        <ul>
+          <li>廖X煙(綠色生活)</li>
+          <li>翁X薇(翁小薇)</li>
+          <li>謝X憲(牛頭牌 SIENTA)</li>
+          <li>胡X惠(龜丹溫泉)</li>
+          <li>王X開(西恩塔)</li>
+          <li>陳X芳(SIENTA)</li>
+          <li>張X騰(小車大空間)</li>
+          <li>黃X惠(有TA萬事ok)</li>
+          <li>彭X晨(竹東景晨)</li>
+          <li>梁X輝(幸福出遊團圓去)</li>
+        </ul>
+      </div>
+    </div>
+    <div id="rule" class="overlap">
+      <div class="close"></div>
+      <div class="wrapper">
+        <p class="mainTitle">SIENTA 車主愛分享 活動辦法</p>
+        <p class="title">活動辦法：</p>
+        <p>上傳您與愛車SIENTA的照片故事，就有機會出現在SIENTA車主愛分享照片牆，每雙周還抽出SIENTA周邊好禮幸運得主!</p>
+        <p class="title">活動期間：</p>
+        <p>2017/03/01(三)-2017/05/31(三)</p>
+        <div class="flex">
+          <div class="col">
+            <p class="title">活動贈品：每雙周送出</p>
+            <ul>
+              <li>【SIENTA造型絨毛毯被】市價1,400元, 1名</li>
+              <li>【SIENTA造型隨身碟】市價1,000元, 1名</li>
+              <li>【SIENTA LED迴力車】市價375元, 10名<br/>(顏色隨機出貨)</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div><img src="assets/images/gift-1.png"/>
+              <p>【SIENTA造型絨毛毯被】</p>
+            </div>
+            <div><img src="assets/images/gift-2.png"/>
+              <p>【SIENTA造型隨身碟】</p>
+            </div>
+            <div><img src="assets/images/gift-3.png"/>
+              <p>【SIENTA LED迴力車】</p>
+            </div>
+          </div>
+        </div>
+        <p class="title">得獎名單公布日期與方式</p>
+        <ul>
+          <li>得獎名單將會於3/30, 4/15, 4/30, 5/15, 5/30, 6/15每隔雙周公告於活動網站之得獎名單頁面同時以電話通知，得獎者請於兩周內回信至 admin@catchad.com.tw  ，提供中獎所需資料，逾時則喪失該贈品領獎資格。</li>
+          <li>活動贈品會於名單公布一個月內寄送。</li>
+        </ul>
+        <p class="title">注意事項</p>
+        <ul>
+          <li>本活動採隨機方式抽出得獎者，主辦單位保有最後中獎審核與變更等值贈品之權利。</li>
+          <li>若得獎人未於指定期限內回覆，或資料填寫錯誤、不完整，致獎品無法送達，則視同放棄，不另補發，資格亦不遞補。</li>
+          <li>依中華民國稅法規定，獎品價值在1000元(含)~19999元者，需填寫制式領獎表單以併入年度綜合所得稅申報，主辦單位和泰汽車公司將於明年初寄送扣繳憑單供得獎者報稅。以上稅法規定若不願意配合，則視為自動棄權，不具得獎資格。其他未盡事宜，悉依稅法相關規定辦理。</li>
+          <li>本活動所有抽獎與兌換贈品，僅郵寄至台、澎、金、馬地區。</li>
+          <li>參與本活動者保證所有填寫、提出之資料均為真實且正確，且未冒用或盜用任何第三人之資料，如有不實或不正確之情事，將被取消得獎資格，且如有致生損害於主辦單位或其他任何第三人，應負一切民刑事責任。主辦單位對於任何不實或不正確之資料不負任何法律責任。</li>
+          <li>中獎者同意主辦單位對所有因使用或領取獎項之後果無須負責。</li>
+          <li>本活動之所有獎品以實物為準，得獎資格不得轉讓他人，中獎者不得要求更改獎項或兌換現金，且不得轉售獎項、贈品。</li>
+          <li>主辦單位保留及擁有本活動所有之內容刊登之權利。本活動因故無法進行時，主辦單位得隨時取消、終止、修改或暫停本活動，無須作事前通知，亦有權對本活動之所有事宜作出補充、解釋或裁決。</li>
+          <li>參與本活動者，即同意受本注意事項之規範，如有違反本注意事項之情事，TOYOTA活動小組得取消其得獎資格，並對於任何破壞本活動之行為保留法律追訴權。</li>
+          <li>其他未盡事宜，悉依TOYOTA活動小組相關規定。</li>
+          <li>如有任何活動相關問題，歡迎E-mail至主辦單位服務信箱admin@catchad.com.tw，主辦單位將於週一至週五11:00-18:00回覆信件並進行處理。</li>
+        </ul>
+      </div>
+    </div>
+    <script src="assets/scripts/lib.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
